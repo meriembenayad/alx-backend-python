@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-""" 0. Async Generator """
-import asyncio
-import random
-from typing import Generator
+""" 1. Async Comprehension """
+from typing import List
 
 async_generator = __import__('0-async_generator').async_generator
 
 
-async def async_comprehension() -> Generator[float, None, None]:
+async def async_comprehension() -> List[float]:
     """
     Coroutine collect 10 random numbers
     using an async comprehensing over async_generator
