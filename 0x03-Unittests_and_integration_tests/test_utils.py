@@ -19,3 +19,17 @@ class TestAccessNestedMap(unittest.TestCase):
             to test the access_nested_map function with different inputs
         """
         self.assertEqual(access_nested_map(nested_map, path), expected)
+
+    @parameterized.expand([
+        ({}, ("a",)),
+        ({"a": 1}, ("a", "b"))
+    ])
+    def test_access_nested_map_exception(self, nested_map: Dict[str, Any],
+                                         path: Tuple[str]) -> None:
+        """
+            Test Method to test access_nested_map function
+            using decorator @parameterized.expand with different inputs
+            that should raise a KeyError
+        """
+        with self.assertRaises(KeyError):
+            access_nested_map(nested_map, path)
