@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ 0. Parameterize a unit test """
 import unittest
 from utils import access_nested_map
