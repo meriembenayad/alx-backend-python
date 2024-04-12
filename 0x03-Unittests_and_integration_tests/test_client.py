@@ -18,10 +18,8 @@ class TestGithubOrgClient(unittest.TestCase):
         Test that GithubOrgClient.org returns the correct value
         """
         test_class = GithubOrgClient(name_org)
-
         self.assertEqual(test_class.org, {"payload": True})
-
-        url = "https://api.github.com/orgs/{name_org}"
+        url = f"https://api.github.com/orgs/{name_org}"
 
         # Test that get_json was called once with expected arg
         mock_get.assert_called_once_with(url)
