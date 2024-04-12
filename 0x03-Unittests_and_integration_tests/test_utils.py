@@ -71,7 +71,8 @@ class TestMemoize(unittest.TestCase):
         class_obj = TestClass()
 
         # Mock a_method of class_obj
-        with patch.object(class_obj, 'a_method', return_value=42) as mock_method:
+        with patch.object(class_obj, 'a_method',
+                          return_value=42) as mock_method:
             # Call a_property twice
             call_one = class_obj.a_property
             call_two = class_obj.a_property
